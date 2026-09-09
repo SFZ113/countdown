@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>重要日期倒计时</h1>
+    <div class="addcard">
+
+        <h2>添加重要日期</h2>
+        <div class="inputdata">
+            <input type="text" id="nameinput" maxlength="15" placeholder="请输入重要日期名称" >
+            <input type="date" id="datainput" >
+            <button id="submit">提交</button>
+        </div>
+
+        <!-- 如果输入格式错误,出现提示 -->
+        <div id="error"></div>
+    </div>
+
+    <div class="showcard">
+        <h2>我的重要日期</h2>
+        <div id="list"></div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+
 </body>
 </html>
