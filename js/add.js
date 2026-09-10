@@ -1,4 +1,4 @@
-export function addData(datas,name,data)
+export function addData(datas,name,data) //添加倒计时
 {
     datas.push(
         {

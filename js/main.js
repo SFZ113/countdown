@@ -17,9 +17,16 @@ function submitData()
     let name = nameinput.value.trim();
     let data = datainput.value;
 
+    if(name.length >10)
+    {
+        error.textContent = "名称不能超过10个字符!";
+        return;
+    }
+    error.textContent = "";
+
     if(name === "" || data === "")
     {
-        error.textContent = "请输入完整的日期信息";
+        error.textContent = "请输入完整的日期信息!";
         return;
     }
     error.textContent = "";
@@ -32,7 +39,7 @@ function submitData()
     {
         editData(datas,Index,name,data);
         Index = -1;
-        submit.textContent = "提交";
+        
     }
 
     nameinput.value = "";
@@ -45,13 +52,18 @@ function startEdit(index)
     datainput.value = datas[index].data;
     nameinput.value = datas[index].name;
     Index = index;
-    submit.textContent = "修改";
+   
 }
 
 function removeDate(index)
 {
-    deleteData(datas,index);
-    showData(datas,list);
+    let is=confirm("确定要删除吗？") 
+
+    if(is)
+    {
+        deleteData(datas,index);
+        showData(datas,list);
+    }
 }
 
 window.removeDate = removeDate;
@@ -61,4 +73,7 @@ submit.addEventListener("click",submitData);
 
 showData(datas,list);
 
-
+//每分钟更新一次
+setInterval(function(){
+    showData(datas,list);
+}, 1000*60);

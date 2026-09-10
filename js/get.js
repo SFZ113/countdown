@@ -1,4 +1,4 @@
-export function getData(data)
+export function getData(data) //计算时间
 {
     let today = new Date();
     let tar = new Date(data);
