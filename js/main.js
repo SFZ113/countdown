@@ -9,7 +9,7 @@ let list = document.getElementById("list");
 let error = document.getElementById("error");
 let submit = document.getElementById("submit");
 
-let datas = [];
+let datas = JSON.parse(localStorage.getItem("datas")) || [];
 let Index = -1;
 
 function submitData()

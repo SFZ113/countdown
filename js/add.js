@@ -6,4 +6,6 @@ export function addData(datas,name,data) //添加倒计时
             data:data
         }
     );
+
+    localStorage.setItem("datas", JSON.stringify(datas));
 }
