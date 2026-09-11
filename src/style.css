@@ -4,7 +4,7 @@ body
     margin: 0 auto; 
     text-align: center; 
     font-family: Arial, sans-serif;
-    background-color: #b2a1a1;
+    background-color: #a5a49a;
 }
 h1
 {
@@ -17,6 +17,22 @@ h1
     color: #5b5b13;
     margin-top: 2rem;
 }
+.addcard button
+{
+  font-size: 1rem;
+  color: #707414;
+}
+
+.buttons
+{
+    display:flex;
+    justify-content: center;
+    gap:1.5rem;  
+}
+.buttons button
+{
+    background-color: #0bbde6;
+}
 .showcard h2
 {
     color: #82e3c7;
@@ -24,12 +40,12 @@ h1
 }
 
 .mycard {
-    width: 50%;
+    width: 60%;
     background-color: #9ac5ebbf; 
     border: 0.2rem solid #d6f377; 
-    border-radius: 0.8rem; 
-    padding: 1rem; 
-    margin-bottom: 1rem; 
+    border-radius: 1.8rem; 
+    padding: 0.55rem; 
+   margin-bottom: 1.5rem;
 }
 
 .addcard hr {
@@ -43,17 +59,19 @@ h1
     background-color: #9c0576;    
 }
 
-#list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#list
+{
+  margin-bottom: 1rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #error
 {
     color: red;
     margin-top: 0.1rem;
-    font-size: 1 rem;
+    font-size: 1rem;
 }
 
 #nameinput
@@ -62,8 +80,8 @@ h1
     font-size: 1.2rem;
     
 }
-#datainput {
-  padding: 0 rem;
+#dateinput {
+  padding: 0rem;
   font-size: 1.2rem;
   color: #0bbde6;
 }
